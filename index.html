@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <title>toogle password</title>
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#img {
+  height: 769.4px;
+  width: 100%;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.inner {
+  height: 150px;
+  width: 300px;
+  position: fixed;
+  top: 290px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.074);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+input {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 90px;
+  padding-left: 10px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  position: fixed;
+  bottom: 30px;
+}
+h1 {
+  position: fixed;
+  top: 20px;
+  font-family: arial;
+  font-size: 30px;
+  color: transparent;
+  -webkit-text-stroke: 1px #fff;
+}
+#icon {
+  height: 30px;
+  width: 40px;
+  position: fixed;
+  bottom: 30px;
+  cursor: pointer;
+  margin-left: 230px;
+}
+
+  </style>
+</head>
+<body>
+<div class="container">
+  <img src="night.png" alt="" id="img">
+  
+  <div class="inner">
+      <h1>Toggle Password</h1>
+      
+      <input type="password" placeholder="password" id="password">
+      <img  id="icon" src="closed-eye.png" >
+  </div>
+</div>
+  <script>let password = document.getElementById("password");
+let icon = document.getElementById("icon");
+
+icon.addEventListener("click", () => {
+  if (password.type === "password") {
+    password.type = "text";
+    icon.src = "eye.png";
+  } else {
+    password.type = "password";
+    icon.src = "closed-eye.png";
+  }
+});
+</script>
+</body>
+</html>
